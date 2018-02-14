@@ -14,10 +14,10 @@
       <p>A place to store things that you have to do!</p>
       <input type="text" placeholder="Filter your to-dos" ng-model="todolist">
       <ol>
-        <li ng-repeat="do in form.toDoList | filter: todolist | orderBy: 'name'">{{do.item}}<button id="xbtn" ng-click="form.removeItem($index)">x</button></li>
+        <li ng-repeat="do in form.toDoList | filter: todolist | orderBy: 'name' track by $index">{{do.item}}<button id="xbtn" ng-click="form.removeItem($index)">x</button></li>
       </ol>
 
-      <input type="text" placeholder="Add to your to-do" ng-model="form.toDo">
+      <input id="addinput" type="text" placeholder="Add to your to-do" ng-model="form.toDo">
       <button id="addbtn">Add</button>
     </form>
   </div>

@@ -7,10 +7,15 @@
     vm.toDoList = [];
     vm.check = function(item) {
       vm.toDoList.push({item})
-      
+      // document.getElementById("addinput").value(""); 
     };
   }
   angular
     .module("app")
     .controller("FormController", FormController);
 })();
+
+
+//leaves the X and number
+//Value doesnt clear
+//x does not position right
