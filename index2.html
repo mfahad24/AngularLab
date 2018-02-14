@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Angular Lab</title>
+</head>
+
+<body>
+  <div id="maindiv" ng-controller="FormController as form">
+    <form ng-submit="form.check(form.toDo);">
+      <h1>TODO List</h1>
+      <p>A place to store things that you have to do!</p>
+      <input type="text" placeholder="Filter your to-dos" ng-model="todolist">
+      <ol>
+        <li ng-repeat="do in form.toDoList | filter: todolist | orderBy: 'name'">{{do.item}}<button id="xbtn" ng-click="form.removeItem($index)">x</button></li>
+      </ol>
+
+      <input type="text" placeholder="Add to your to-do" ng-model="form.toDo">
+      <button id="addbtn">Add</button>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+</body>
+
+</html>
