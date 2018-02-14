@@ -7,7 +7,7 @@
     vm.toDoList = [];
     vm.check = function(item) {
       vm.toDoList.push({item})
-      // document.getElementById("addinput").value(""); 
+      // document.getElementById("addinput").value("");
     };
   }
   angular
@@ -18,4 +18,4 @@
 
 //leaves the X and number
 //Value doesnt clear
-//x does not position right
+//x does not position right DONE
