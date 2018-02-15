@@ -8,25 +8,17 @@
 </head>
 
 <body>
-  <div id="maindiv" ng-controller="FormController as form">
-    <form ng-submit="form.check(form.toDo);">
-      <h1>TODO List</h1>
-      <p>A place to store things that you have to do!</p>
-      <input type="text" placeholder="Filter your to-dos" ng-model="todolist">
-      <ol>
-        <li ng-repeat="do in form.toDoList | filter: todolist | orderBy: 'name' track by $index">{{do.item}}<button id="xbtn" ng-click="form.removeItem($index)">x</button></li>
-      </ol>
+  <task-form></task-form>
+</body>
 
-      <input id="addinput" type="text" placeholder="Add to your to-do" ng-model="form.toDo">
-      <button id="addbtn">Add</button>
-    </form>
-  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-  <script src="app.js"></script>
-  <script src="controller.js"></script>
-  <script src="taskForm.component.js"></script>
-  <script src="taskList.component.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="Controllers\controller.js"></script>
+<script src="Components\taskForm.component.js"></script>
+<script src="Components\taskList.component.js"></script>
+<script src="Directives\hoverState.directive.js"></script>
 </body>
 
 </html>
