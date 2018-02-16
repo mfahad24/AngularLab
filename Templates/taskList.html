@@ -1,5 +1,9 @@
-<input type="text" placeholder="Filter your to-dos" ng-model="todolist">
+<input type="text" placeholder="Filter your to-dos" ng-model="todolist" >
 <ol>
-  <li ng-repeat="do in form.toDoList | filter: todolist | orderBy: 'name' track by $index">{{do.item}}<button id="xbtn" ng-click="form.removeItem($index)">x</button></li>
+  <li  hover-state ng-repeat="task in $ctrl.toDoList | filter: todolist | orderBy: 'name' track by $index">{{task}}<button id="xbtn" ng-click="$ctrl.removeItem($index)">x</button></li>
 </ol>
-<input id="addinput" type="text" placeholder="Add to your to-do" ng-model="form.toDo">
+<input id="addinput" type="text" placeholder="Add to your to-do" ng-model="$ctrl.toDo">
+<button id="addbtn" ng-click="$ctrl.check($ctrl.toDo)">Add</button>
+
+
+<!-- ng-model="search" -->

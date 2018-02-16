@@ -1,8 +1,8 @@
 (function() {
-  var taskForm = {
+var taskForm = {
     templateUrl: 'Templates/taskForm.html'
-  };
-
-  angular.module("app")
+}; 
+  angular
+    .module("app")
     .component("taskForm", taskForm);
 })();

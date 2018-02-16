@@ -6,7 +6,9 @@
     };
     vm.toDoList = [];
     vm.check = function(item) {
-      vm.toDoList.push({item})
+      console.log(vm.toDoList);
+      vm.toDoList.push(item)
+      vm.toDo = ""; 
       // document.getElementById("addinput").value("");
     };
   }

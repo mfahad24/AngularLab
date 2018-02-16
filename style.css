@@ -54,6 +54,7 @@ input {
   background-color: white;
   position: absolute;
   right: 30px;
+  background-color: inherit; 
 }
 
 /* #xtbn:hover {

@@ -1,8 +1,10 @@
 (function() {
-  var taskList = {
-    templateUrl: 'Templates/taskList.html'
-  };
-
-  angular.module("app")
+var taskList = {
+    // document.getElementById("addinput").value("");
+    templateUrl: 'Templates/taskList.html',
+    controller: "FormController"
+    }
+  angular
+    .module("app")
     .component("taskList", taskList);
 })();
