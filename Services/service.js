@@ -2,8 +2,7 @@
 
   function ToDoService () {
 
-    var toDoInputs = {};
-    console.log(toDoInputs); 
+    var toDoInputs = [];
     return {
       getData: getData,
       setData: setData,

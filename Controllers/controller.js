@@ -4,13 +4,11 @@
     vm.removeItem = function(index) {
       vm.toDoList.splice(index, 1)
     };
-    vm.toDoList = [];
+    vm.toDoList = ToDoService.getData();
     vm.incomingInputs = function(item) {
-      ToDoService.setData(item);
       vm.toDoList.push(item)
       vm.toDo = "";
     };
-    vm.getIncomingData = ToDoService.getData();
   }
   angular
     .module("app")
