@@ -1,16 +1,16 @@
 (function() {
-  function FormController() {
+  function FormController(ToDoService) {
     var vm = this; //this refers to the controller
     vm.removeItem = function(index) {
       vm.toDoList.splice(index, 1)
     };
     vm.toDoList = [];
-    vm.check = function(item) {
-      console.log(vm.toDoList);
+    vm.incomingInputs = function(item) {
+      ToDoService.setData(item);
       vm.toDoList.push(item)
-      vm.toDo = ""; 
-      // document.getElementById("addinput").value("");
+      vm.toDo = "";
     };
+    vm.getIncomingData = ToDoService.getData();
   }
   angular
     .module("app")

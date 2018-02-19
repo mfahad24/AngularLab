@@ -8,7 +8,7 @@
         });
         $element.on("mouseout", function (){
           $element.css("background-color", 'white')
-          console.log("Hello");
+
         })
       }
 
