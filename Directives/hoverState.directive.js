@@ -8,10 +8,8 @@
         });
         $element.on("mouseout", function (){
           $element.css("background-color", 'white')
-
         })
       }
-
     }
   }
   angular

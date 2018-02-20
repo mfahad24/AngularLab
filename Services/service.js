@@ -1,6 +1,6 @@
-(function (){
+(function() {
 
-  function ToDoService () {
+  function ToDoService() {
 
     var toDoInputs = [];
     return {
@@ -8,15 +8,17 @@
       setData: setData,
 
     }
-    function setData (input) {
+
+    function setData(input) {
       toDoInputs = input;
 
     }
-    function getData (){
+
+    function getData() {
       return toDoInputs;
     }
   }
   angular
-  .module("app")
-  .factory("ToDoService", ToDoService)
+    .module("app")
+    .factory("ToDoService", ToDoService)
 })();
